@@ -1,0 +1,14 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 25px;
+  
+}
+.navbar-brand {
+  img {
+    width: 75px;
+    height: 40px;
+    cursor: pointer;
+  }
+}
