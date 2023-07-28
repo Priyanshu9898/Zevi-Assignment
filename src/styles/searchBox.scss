@@ -1,0 +1,43 @@
+.search-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 915px;
+  height: 83px;
+  @media (max-width: 768px) {
+    /* Adjust input padding for smaller screens */
+    width: 90%;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    padding: 15px 25px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    font-size: larger;
+    outline: none;
+
+    @media (max-width: 768px) {
+      /* Adjust input padding for smaller screens */
+      padding: 8px;
+      border-radius: 10px;
+    }
+  }
+
+  .search-icon {
+    position: absolute;
+    right: 25px;
+    width: 25px;
+    height: 25px;
+    color: #959494; /* Change the icon color as needed */
+    pointer-events: none; /* Prevent the icon from capturing mouse events */
+
+    @media (max-width: 768px) {
+      /* Adjust icon size for smaller screens */
+      width: 16px;
+      height: 16px;
+      right: 15px;
+    }
+  }
+}

@@ -1,6 +1,8 @@
 import React, { FC } from "react";
 import Navbar from "../../components/Navbar";
 import image from "../../assets/home.jpg";
+import SearchBox from "../../components/SearchBox";
+import "../../styles/home.scss";
 
 const HomePage: FC = () => {
   return (
@@ -15,10 +17,13 @@ const HomePage: FC = () => {
           backgroundPosition: "center",
           width: "100vw",
           backgroundOrigin: "content-box",
-          backgroundAttachment: "fixed"
+          backgroundAttachment: "fixed",
         }}
       >
         <Navbar />
+        <div className="container">
+          <SearchBox />
+        </div>
       </div>
     </>
   );
