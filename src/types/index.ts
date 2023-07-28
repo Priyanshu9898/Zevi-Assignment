@@ -1,0 +1,1 @@
+export interface TrendCardImageType {image: any; caption: string}

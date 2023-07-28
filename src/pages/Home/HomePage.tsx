@@ -17,13 +17,12 @@ const HomePage: FC = () => {
           backgroundPosition: "center",
           width: "100vw",
           backgroundOrigin: "content-box",
-          backgroundAttachment: "fixed",
+        //   backgroundAttachment: "fixed",
         }}
       >
         <Navbar />
-        <div className="container">
-          <SearchBox />
-        </div>
+
+        <SearchBox />
       </div>
     </>
   );

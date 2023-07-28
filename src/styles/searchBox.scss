@@ -1,3 +1,12 @@
+.container {
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .search-box {
   position: relative;
   display: flex;
@@ -5,8 +14,8 @@
   width: 100%;
   max-width: 915px;
   height: 83px;
+
   @media (max-width: 768px) {
-    /* Adjust input padding for smaller screens */
     width: 90%;
   }
 
@@ -19,7 +28,6 @@
     outline: none;
 
     @media (max-width: 768px) {
-      /* Adjust input padding for smaller screens */
       padding: 8px;
       border-radius: 10px;
     }
@@ -30,14 +38,86 @@
     right: 25px;
     width: 25px;
     height: 25px;
-    color: #959494; /* Change the icon color as needed */
-    pointer-events: none; /* Prevent the icon from capturing mouse events */
+    color: #959494;
 
     @media (max-width: 768px) {
-      /* Adjust icon size for smaller screens */
       width: 16px;
       height: 16px;
       right: 15px;
     }
   }
 }
+
+.trend-card {
+  position: absolute;
+  top: 100%;
+  left: -70px;
+  width: 1025px;
+  max-height: 95vh;
+  overflow: auto;
+  padding: 0px 20px;
+  background-color: #fff;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  @media (max-width: 768px) {
+    // padding: 10px;
+    width: 90%;
+    overflow-x: hidden;
+    left: 0px;
+    max-height: 75vh;
+    height: 75vh;
+  }
+
+  h2 {
+    padding: 0px 22px;
+    @media (max-width: 768px) {
+      padding: 0;
+    }
+  }
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 2fr));
+  //   grid-gap: 20px;
+  width: 100%;
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  img {
+    width: 165px;
+    height: 200px;
+    object-fit: cover;
+  
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
+}
+
+.link-grid {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  width: 100%;
+  margin-bottom: 10px;
+  @media (max-width: 768px) {
+    padding-left: 0;
+  }
+
+  a {
+    color: #000;
+    text-decoration: none;
+  }
+}
+
