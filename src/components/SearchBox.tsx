@@ -3,12 +3,19 @@ import "../styles/searchBox.scss";
 import TrendCard from "./TrendCard";
 
 const SearchBox: FC = () => {
+  const [search, setSearch] = useState("");
   const [showCard, setShowCard] = useState(false);
   return (
     <>
       <div className="container">
         <div className="search-box" onClick={() => setShowCard(true)}>
-          <input type="text" placeholder="Search" />
+          <input
+            type="text"
+            placeholder="Search"
+            value={search}
+            name="search"
+            onChange={(e) => setSearch(e.target.value)}
+          />
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
